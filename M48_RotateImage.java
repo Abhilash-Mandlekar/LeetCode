@@ -6,24 +6,24 @@ class Solution {
         j/=2; int k=0;
         while(k<j){
        for(int i=k; i<matrix[0].length-1-k; i++){ //[0+k] --- [n-k]
-           int temp1 = matrix[0+k][0+i]; // int temp1 = matrix[0][0+i];
-           int temp2 = matrix[0+i][n-k]; // int temp2 = matrix[0+i][n];
+           int temp1 = matrix[0+k][0+i]; 
+           int temp2 = matrix[0+i][n-k]; 
            
-           matrix[0+i][n-k] = temp1; // matrix[0+i][n] = temp1;
+           matrix[0+i][n-k] = temp1; 
            temp1 = temp2;
-           temp2 = matrix[n-k][n-i]; // temp2 = matrix[n][n-i];
+           temp2 = matrix[n-k][n-i];
            
-           matrix[n-k][n-i] = temp1; // matrix[n][n-i] = temp1;
+           matrix[n-k][n-i] = temp1; 
            temp1 = temp2;
-           temp2 = matrix[n-i][0+k]; // temp2 = matrix[n][0];
+           temp2 = matrix[n-i][0+k]; 
            
-           matrix[n-i][0+k] = temp1; //matrix[n-i][0] = temp1;
+           matrix[n-i][0+k] = temp1; 
            temp1 = temp2;
-           temp2 = matrix[0+k][0+i]; // temp2 = matrix[0][0+i];
+           temp2 = matrix[0+k][0+i]; 
            
-            matrix[0+k][0+i] = temp1; // matrix[0][0+i] = temp1;
+            matrix[0+k][0+i] = temp1; 
            temp1 = temp2;
-           temp2 = matrix[0+i][n-k]; // temp2 = matrix[0+i][n];
+           temp2 = matrix[0+i][n-k]; 
            
            
        }
