@@ -16,5 +16,5 @@ case
 When Student2 IS NULL THEN Student1
 ELSE Student2
 End as student 
-from cte order by Id1;
+from cte order by Id1; 
 
