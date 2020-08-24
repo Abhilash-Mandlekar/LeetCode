@@ -41,7 +41,9 @@ class Solution {
                 
                 Node n = q.poll();
                 
-                result = n;                
+                result = n;
+                
+                //point the next pointer to next element (can use peek)
                 result.next = q.element();
                     
                 //System.out.println(n.val);
