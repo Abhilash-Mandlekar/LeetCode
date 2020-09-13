@@ -1,0 +1,37 @@
+class BSTIterator {
+
+    List<Integer> result = new ArrayList<>();
+    
+    public BSTIterator(TreeNode root) {
+       result = inorderTraversal(root, result);
+    }
+    
+    /** @return the next smallest number */
+    public int next() {
+        return result.remove(0);
+    }
+    
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        if(result.size()==0)
+            return false;
+        else
+            return true;
+    }
+    
+    public List<Integer> inorderTraversal(TreeNode root, List<Integer> al){
+        if(root==null)
+            return al;
+        inorderTraversal(root.left, al);
+        al.add(root.val);
+        inorderTraversal(root.right, al);
+        return al;
+    }
+}
+
+/**
+ * Your BSTIterator object will be instantiated and called as such:
+ * BSTIterator obj = new BSTIterator(root);
+ * int param_1 = obj.next();
+ * boolean param_2 = obj.hasNext();
+ */
