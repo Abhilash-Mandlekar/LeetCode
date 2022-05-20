@@ -7,7 +7,8 @@ class Solution:
         
         def findLongest(i, j, matrix, dp):
             nonlocal rows, cols
-            
+            if i<0 or j<0 or i>=rows or j>=cols:
+                return
             if dp[i][j]!=0:
                 return dp[i][j] 
             
